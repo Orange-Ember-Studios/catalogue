@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" style="--ma:#5a1d57">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,7 @@ body { overflow-x: hidden }
 nav { z-index: 100 !important }
 header { position: relative; z-index: 50 }
 main, section, .menu, .cards, .grid, .steps, .services, .products { position: relative; z-index: 2 }
-.card, .prod, .svc { transition: transform .25s cubic-bezier(.2,.8,.3,1.3), box-shadow .25s }
+.card, .prod, .svc { cursor: pointer; transition: transform .25s cubic-bezier(.2,.8,.3,1.3), box-shadow .25s }
 .card:hover, .prod:hover, .svc:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,.22) }
 .card:nth-child(2), .prod:nth-child(2), .svc:nth-child(2) { animation: pop .7s ease .1s both }
 .card:nth-child(3), .prod:nth-child(3), .svc:nth-child(3) { animation: pop .7s ease .2s both }
@@ -84,6 +84,43 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 .svc-pic { height: 140px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -24px -24px 16px }
 .gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 950px; margin: -10px auto 50px; padding: 0 5% }
 .gal img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35,22,16,.15) }
+
+
+/* ---- modal de detalle pro ---- */
+.mbg { position: fixed; inset: 0; background: rgba(10,8,12,.58); backdrop-filter: blur(3px);
+  opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 999 }
+.mbg.open { opacity: 1; pointer-events: auto }
+.modal { position: fixed; left: 50%; top: 50%; transform: translate(-50%, calc(-50% + 26px));
+  width: min(470px, 92vw); max-height: 88vh; overflow: auto; border-radius: 18px;
+  background: #fff; opacity: 0; pointer-events: none;
+  transition: opacity .28s, transform .28s cubic-bezier(.2,.8,.2,1); z-index: 1000;
+  box-shadow: 0 34px 90px rgba(0,0,0,.4) }
+.modal.open { opacity: 1; transform: translate(-50%, -50%); pointer-events: auto }
+.modal .mimg { width: 100%; height: 220px; object-fit: cover; display: block }
+.modal .mbody { padding: 20px 22px 26px }
+.modal .mcat { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: #8a8f98; margin-bottom: 4px }
+.modal h3 { font-size: 22px; margin: 2px 0 4px; color: #22242a }
+.modal .mcost { font-size: 20px; font-weight: 800; color: var(--ma, #22242a); margin: 4px 0 2px }
+.modal .mp { font-size: 15px; color: #5c5560; line-height: 1.65; margin: 8px 0 0 }
+.modal h5 { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: #8a8f98; margin: 16px 0 8px }
+.modal .sz { display: inline-block; padding: 8px 14px; border: 1.5px solid #e3e3e6; border-radius: 9px;
+  margin: 0 8px 8px 0; cursor: pointer; font-size: 14px; font-weight: 600; color: #33363c;
+  user-select: none; transition: all .15s }
+.modal .sz.on { border-color: var(--ma); background: var(--ma); color: #fff }
+.modal .mlist { margin: 0; padding-left: 18px; color: #33363c; font-size: 14px; line-height: 1.9 }
+.modal .mcta { display: block; text-align: center; margin-top: 16px; padding: 14px; border-radius: 11px;
+  background: #25d366; color: #06230e; font-weight: 800; font-size: 15px; text-decoration: none; transition: transform .2s }
+.modal .mcta:hover { transform: translateY(-2px) }
+.modal .mnote { font-size: 12.5px; color: #8a8f98; text-align: center; margin-top: 9px }
+.modal .mx { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%;
+  border: 0; background: rgba(255,255,255,.94); font-size: 17px; line-height: 1; cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,.18); color: #22242a; z-index: 2 }
+@media (max-width: 560px) {
+  .modal { left: 0; bottom: 0; top: auto; width: 100%; max-height: 92vh; border-radius: 20px 20px 0 0;
+    transform: translateY(102%) }
+  .modal.open { transform: translateY(0) }
+  .modal .mimg { height: 190px }
+}
 
 ::selection { background: rgba(255,122,77,.35) }
 @media (max-width: 820px) {
@@ -157,5 +194,89 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
   </div>
   <div class="foot-bar">© 2026 Orange Ember Studios · Demo diseñada y desarrollada por <a href="https://orangeember.com">orangeember.com</a></div>
 </footer>
+
+<div class="mbg" id="mbg"></div>
+<div class="modal" id="mpanel" role="dialog" aria-modal="true">
+  <button class="mx" id="mx" aria-label="Cerrar">&times;</button>
+  <img class="mimg" id="mimg" alt="">
+  <div class="mbody">
+    <div class="mcat" id="mcat"></div>
+    <h3 id="mname"></h3>
+    <div class="mcost" id="mcost"></div>
+    <p class="mp" id="mdesc"></p>
+    <h5 id="mtag"></h5>
+    <div id="mopts"></div>
+    <a class="mcta" id="mcta" href="#" target="_blank" rel="noopener"></a>
+    <div class="mnote">Respuesta en minutos por WhatsApp</div>
+  </div>
+</div>
+<script>
+(function () {
+  var P = [{"n": "Manicure spa", "p": "$45.000", "cat": "Servicio", "btn": "Agendar por WhatsApp", "img": "../assets/img/estetica/1.jpg", "d": "Limpieza profunda, corte y esmaltado con acabado de salón; salen listas para presumir.", "dur": "Duración: 60 min", "inc": "Incluye esmaltado y diseño sencillo", "wa": "Hola, quiero agendar el Manicure spa ($45.000)."}, {"n": "Maquillaje de evento", "p": "$120.000", "cat": "Servicio", "btn": "Agendar por WhatsApp", "img": "../assets/img/estetica/2.jpg", "d": "Maquillaje profesional según la ocasión, con acabado de larga duración.", "dur": "Duración: 90 min", "inc": "Incluye prueba previa y retoques", "wa": "Hola, quiero agendar el Maquillaje de evento ($120.000)."}, {"n": "Limpieza facial profunda", "p": "$85.000", "cat": "Servicio", "btn": "Agendar por WhatsApp", "img": "../assets/img/estetica/3.jpg", "d": "Exfoliación, mascarilla y tratamiento según tu tipo de piel. Piel nueva, sensación fresca.", "dur": "Duración: 75 min", "inc": "Incluye diagnóstico de piel", "wa": "Hola, quiero agendar la Limpieza facial profunda ($85.000)."}, {"n": "Masaje relajante", "p": "$95.000", "cat": "Servicio", "btn": "Agendar por WhatsApp", "img": "../assets/img/estetica/4.jpg", "d": "Sesión corporal con aceites esenciales para despedir el estrés del día.", "dur": "Duración: 60 min", "inc": "Incluye aceite esencial a elegir", "wa": "Hola, quiero agendar el Masaje relajante ($95.000)."}];
+  var group = document.querySelectorAll(".services .svc");
+  var bg = document.getElementById("mbg"), panel = document.getElementById("mpanel");
+  var cur = null, selSz = "";
+  function fill(i) {
+    var p = P[i]; cur = p; selSz = "";
+    document.getElementById("mimg").src = p.img;
+    document.getElementById("mimg").alt = p.n;
+    document.getElementById("mcat").textContent = p.cat;
+    document.getElementById("mname").textContent = p.n;
+    document.getElementById("mcost").textContent = p.p;
+    document.getElementById("mdesc").textContent = p.d;
+    var tag = document.getElementById("mtag"), box = document.getElementById("mopts");
+    var html = "";
+    if (p.sizes) {
+      tag.textContent = "Elige tu talla";
+      for (var s = 0; s < p.sizes.length; s++) {
+        html += '<span class="sz" data-sz="' + p.sizes[s] + '">' + p.sizes[s] + "</span>";
+      }
+    } else if (p.dur) {
+      tag.textContent = "Detalles";
+      html = '<ul class="mlist"><li>' + p.dur + "</li><li>" + p.inc + "</li></ul>";
+    } else {
+      tag.textContent = "Pieza artesanal";
+      html = '<p style="margin:0;color:#33363c;font-size:14px">Cada pieza es unica: varian ligeramente en tono y terminado, parte del encanto del trabajo a mano.</p>';
+    }
+    tag.style.display = "block";
+    box.innerHTML = html;
+    var chips = box.querySelectorAll(".sz");
+    for (var c = 0; c < chips.length; c++) {
+      chips[c].addEventListener("click", function () {
+        for (var k = 0; k < chips.length; k++) chips[k].classList.remove("on");
+        this.classList.add("on"); selSz = this.dataset.sz; upd();
+      });
+    }
+    upd();
+  }
+  function upd() {
+    var a = document.getElementById("mcta");
+    var p = cur; if (!p) return;
+    var extra = "";
+    if (cur.sizes) extra = " Talla: " + (selSz || "consultar");
+    var msg = p.wa.replace("__SZ__", selSz || "consultar") + extra;
+    a.textContent = cur.btn;
+    a.href = "https://wa.me/573332840946?text=" + encodeURIComponent(msg);
+  }
+  function open(i) {
+    fill(i); bg.classList.add("open"); panel.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function close() {
+    bg.classList.remove("open"); panel.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  for (var i = 0; i < group.length; i++) {
+    (function (i) {
+      group[i].addEventListener("click", function (ev) { ev.preventDefault(); open(i); });
+    })(i);
+  }
+  document.getElementById("mx").addEventListener("click", close);
+  bg.addEventListener("click", close);
+  panel.addEventListener("click", function (ev) { ev.stopPropagation(); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") close(); });
+})();
+</script>
+
 </body>
 </html>
