@@ -91,6 +91,24 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
   .b3 { display: none }
   .hero { padding-top: 64px !important; padding-bottom: 64px !important }
 }
+
+/* ---- pie de página pro ---- */
+.foot { position: relative; overflow: hidden; padding: 58px 6% 0; color: #fff }
+.foot::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--fa), var(--fb), transparent 70%) }
+.foot::after { content: ""; position: absolute; width: 380px; height: 380px; border-radius: 50%; right: -140px; bottom: -200px; filter: blur(70px); opacity: .22; background: var(--fa) }
+.foot-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.25fr; gap: 30px; max-width: 1100px; margin: 0 auto; position: relative; z-index: 2 }
+.foot-logo { font-size: 19px; letter-spacing: 3px; font-weight: 800; margin-bottom: 10px }
+.foot-brand p { color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.7 }
+.foot-col h4, .foot-cta h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,.5); margin-bottom: 12px }
+.foot-col a { display: block; color: rgba(255,255,255,.78); text-decoration: none; font-size: 14px; margin-bottom: 9px; transition: color .2s, transform .2s }
+.foot-col a:hover { color: var(--fb); transform: translateX(4px) }
+.foot-col p, .foot-cta p { color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.8 }
+.foot-cta .btn2 { display: inline-block; margin-top: 14px; padding: 11px 22px; border-radius: 8px; background: linear-gradient(90deg, var(--fa), var(--fb)); color: #10131a; font-weight: 800; text-decoration: none; font-size: 14px; box-shadow: 0 8px 22px rgba(0,0,0,.3); transition: transform .2s }
+.foot-cta .btn2:hover { transform: translateY(-2px) scale(1.02) }
+.foot-bar { position: relative; z-index: 2; margin-top: 44px; padding: 16px 6%; border-top: 1px solid rgba(255,255,255,.12); text-align: center; color: rgba(255,255,255,.55); font-size: 13px }
+.foot-bar a { color: var(--fb); text-decoration: none; font-weight: 600 }
+.foot-bar a:hover { text-decoration: underline }
+@media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr; gap: 26px } }
 </style>
 </head>
 <body>
@@ -114,6 +132,30 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 <p>Elige el servicio, el día y la hora. Te confirmamos al instante.</p>
 <a class="btn" href="https://wa.me/573332840946">Reservar ahora</a>
 </div>
-<footer>© Lumé Beauty · Usaquén, Bogotá · Demo creada por<a href="https://orangeember.com">Orange Ember Studios</a></footer>
+<footer class="foot" style="--fa:#5a1d57; --fb:#d463a8; background:#2b0f29">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="foot-logo">LUMÉ BEAUTY</div>
+      <p>Belleza y estética facial en Usaquén, con agenda en línea.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explora</h4>
+      <a href="#">Servicios</a>
+      <a href="#">Promos</a>
+      <a href="https://wa.me/573332840946">Agenda</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contacto</h4>
+      <p>WhatsApp +57 333 284 0946</p>
+      <p>Usaquén, Bogotá</p>
+    </div>
+    <div class="foot-cta">
+      <h4>Lleva tu tienda al siguiente nivel</h4>
+      <p>Otros negocios de tu zona ya tienen así su vitrina digital.</p>
+      <a class="btn2" href="https://orangeember.com">orangeember.com</a>
+    </div>
+  </div>
+  <div class="foot-bar">© 2026 Orange Ember Studios · Demo diseñada y desarrollada por <a href="https://orangeember.com">orangeember.com</a></div>
+</footer>
 </body>
 </html>
