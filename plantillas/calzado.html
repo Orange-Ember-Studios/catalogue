@@ -105,13 +105,13 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
   opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 999 }
 .mbg.open { opacity: 1; pointer-events: auto }
 .modal { position: fixed; left: 50%; top: 50%; transform: translate(-50%, calc(-50% + 26px));
-  width: min(470px, 92vw); max-height: 88vh; overflow: auto; border-radius: 18px;
+  width: min(470px, 92vw); max-height: 92vh; overflow: auto; border-radius: 18px;
   background: #fff; opacity: 0; pointer-events: none;
   transition: opacity .28s, transform .28s cubic-bezier(.2,.8,.2,1); z-index: 1000;
   box-shadow: 0 34px 90px rgba(0,0,0,.4) }
 .modal.open { opacity: 1; transform: translate(-50%, -50%); pointer-events: auto }
-.modal .mimg { width: 100%; height: 220px; object-fit: cover; display: block }
-.modal .mbody { padding: 20px 22px 26px }
+.modal .mimg { width: 100%; height: 196px; object-fit: cover; display: block }
+.modal .mbody { padding: 16px 20px 22px }
 .modal .mcat { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: #8a8f98; margin-bottom: 4px }
 .modal h3 { font-size: 22px; margin: 2px 0 4px; color: #22242a }
 .modal .mcost { font-size: 20px; font-weight: 800; color: var(--ma, #22242a); margin: 4px 0 2px }
@@ -122,7 +122,7 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
   user-select: none; transition: all .15s }
 .modal .sz.on { border-color: var(--ma); background: var(--ma); color: #fff }
 .modal .mlist { margin: 0; padding-left: 18px; color: #33363c; font-size: 14px; line-height: 1.9 }
-.modal .mcta { display: block; text-align: center; margin-top: 16px; padding: 14px; border-radius: 11px;
+.modal .mcta { display: block; text-align: center; margin-top: 12px; padding: 13px; border-radius: 11px;
   background: #25d366; color: #06230e; font-weight: 800; font-size: 15px; text-decoration: none; transition: transform .2s }
 .modal .mcta:hover { transform: translateY(-2px) }
 .modal .mnote { font-size: 12.5px; color: #8a8f98; text-align: center; margin-top: 9px }
