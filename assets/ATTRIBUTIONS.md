@@ -1,12 +1,17 @@
 # Créditos de imágenes
 
-Imágenes de Wikimedia Commons (licencias libres). Atribuciones:
+Imágenes de Wikimedia Commons (licencias libres). Atribuciones por archivo:
 
 ## artesanal
 - `artesanal/1.jpg` — File:Arteanías Wayuu. La Guajira-Rioacha (Colombia).jpg por Kátharçis.Colombia (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Artean%C3%ADas_Wayuu._La_Guajira-Rioacha_(Colombia).jpg
 - `artesanal/2.jpg` — File:Artesania wayuu muestra del festival Uribia.jpg por Brigilio2026 (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Artesania_wayuu_muestra_del_festival_Uribia.jpg
 - `artesanal/3.jpg` — File:Textile piece, macramé (AM 16090-2).jpg por Unknown authorUnknown author (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Textile_piece,_macram%C3%A9_(AM_16090-2).jpg
 - `artesanal/4.jpg` — File:Textile piece, macramé (AM 16090-3).jpg por Unknown authorUnknown author (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Textile_piece,_macram%C3%A9_(AM_16090-3).jpg
+- `artesanal/5.jpg` — File:Handmade bingo journal.jpg por Lisa Yarost (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Handmade_bingo_journal.jpg
+- `artesanal/6.jpg` — File:Vintage Occidental Hotel postcard, Muskegon, MI.jpg por Brandon Bartoszek (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Vintage_Occidental_Hotel_postcard,_Muskegon,_MI.jpg
+- `artesanal/7.jpg` — File:Handmade jewelry by arp.jpg por Myself (Adrian Pingstone). (Public domain) — https://commons.wikimedia.org/wiki/File:Handmade_jewelry_by_arp.jpg
+- `artesanal/8.jpg` — File:Togo Beadwork 2.jpg por Philip Nalangan (CC BY 4.0) — https://commons.wikimedia.org/wiki/File:Togo_Beadwork_2.jpg
+- `artesanal/9.jpg` — File:Junk Journal pages decorated with scraps of paper.jpg por Artisannie (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Junk_Journal_pages_decorated_with_scraps_of_paper.jpg
 
 ## boutique
 - `boutique/1.jpg` — File:White wedding dress worn by unidentified female model.jpg por Kip Soep (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:White_wedding_dress_worn_by_unidentified_female_model.jpg
@@ -31,6 +36,13 @@ Imágenes de Wikimedia Commons (licencias libres). Atribuciones:
 - `estetica/2.jpg` — File:Manicure closeup.jpg por U.S. Air Force photo by Tech. Sgt. Christopher A Campbell (Public domain) — https://commons.wikimedia.org/wiki/File:Manicure_closeup.jpg
 - `estetica/3.jpg` — File:Pink nails and glitter manicure.jpg por Maegan Tintari (CC BY 2.0) — https://commons.wikimedia.org/wiki/File:Pink_nails_and_glitter_manicure.jpg
 - `estetica/4.jpg` — File:Queer manicure example.jpg por Tails Wx (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Queer_manicure_example.jpg
+- `estetica/5.jpg` — File:Make-up artist.jpg por Charlie Brewer from Sydney, Australia (CC BY-SA 2.0) — https://commons.wikimedia.org/wiki/File:Make-up_artist.jpg
+- `estetica/6.jpg` — File:Routine Facial Treatment And Care.jpg por Davidbrenna.artist; Contact Copyright Holder ©: Full name: David Brenna
+Mailing address: 57 W. 48th St., New York, United States
+Phone number: +1 586 956 0282
+
+Email: davidbrenna.artist@yahoo.com (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Routine_Facial_Treatment_And_Care.jpg
+- `estetica/7.jpg` — File:Back Rub massage at a spa.jpg por Kolobetsoo (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Back_Rub_massage_at_a_spa.jpg
 
 ## formal
 - `formal/1.jpg` — File:Man in biz suit in front of office windows.jpg por Ildar Sagdejev (Specious) (CC BY-SA 4.0) — https://commons.wikimedia.org/wiki/File:Man_in_biz_suit_in_front_of_office_windows.jpg
