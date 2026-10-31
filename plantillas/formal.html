@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Duarte — Sastrería y formal wear</title>
+<style>
+  :root { --ink:#171310; --tan:#8a6a2f; --paper:#f7f4ee; --line:#e2d9c8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--paper); color:var(--ink); }
+  nav { display:flex; justify-content:space-between; padding:20px 6%; background:var(--ink); color:var(--paper); position:sticky; top:0; }
+  nav .logo { letter-spacing:4px; font-size:17px; color:var(--tan); font-weight:700; }
+  nav a { color:var(--paper); text-decoration:none; margin-left:20px; font-size:14px; opacity:.85; }
+  nav a:hover { color:var(--tan); }
+  .hero { background:linear-gradient(rgba(23,19,16,.75), rgba(23,19,16,.85)), repeating-linear-gradient(45deg, #201a14, #201a14 12px, #241d16 12px, #241d16 24px); padding:100px 6%; color:var(--paper); }
+  .hero h1 { font-family:Georgia, serif; font-size:clamp(30px,5vw,50px); max-width:560px; line-height:1.2; }
+  .hero p { margin:18px 0 30px; opacity:.85; max-width:440px; line-height:1.7; }
+  .btn { display:inline-block; padding:13px 30px; background:var(--tan); color:#fff; text-decoration:none; font-weight:700; border-radius:4px; }
+  .btn.light { background:var(--paper); color:var(--ink); margin-left:12px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; max-width:1050px; margin:60px auto; padding:0 5%; }
+  .step { border-top:3px solid var(--tan); padding-top:16px; }
+  .step b { font-size:18px; }
+  .step p { color:#5d5347; font-size:14px; margin-top:8px; line-height:1.6; }
+  .step .n { font-family:Georgia, serif; font-size:13px; color:var(--tan); letter-spacing:2px; }
+  .quote { text-align:center; font-family:Georgia, serif; font-size:clamp(20px,3vw,28px); max-width:700px; margin:0 auto; padding:40px 6%; color:#3d332a; }
+  .cta-band { background:var(--ink); color:var(--paper); text-align:center; padding:56px 20px; }
+  .cta-band p { opacity:.8; margin:12px 0 24px; }
+  footer { text-align:center; font-size:13px; color:#7a7060; padding:22px; background:#efe9dd; }
+  footer a { color:var(--tan); text-decoration:none; }
+</style>
+</head>
+<body>
+<nav><div class="logo">CASA DUARTE</div><div><a href="#">Sastrería</a><a href="#">Formal wear</a><a href="#">Telas</a><a href="#">Citas</a></div></nav>
+<div class="hero">
+  <h1>Un traje hecho para ti, tomado a todas tus medidas</h1>
+  <p>Sastrería y formal wear para bodas, graduaciones y entrevistas. Agenda tu cita y elige tela con un asesor en minutos.</p>
+  <a class="btn" href="https://wa.me/573006555555">Agendar cita</a><a class="btn light" href="#proceso">Cómo funciona</a>
+</div>
+<h2 id="proceso" style="text-align:center; padding-top:10px;">Nuestro proceso — cuatro pasos</h2>
+<div class="steps">
+  <div class="step"><span class="n">PASO 01</span><br><b>Consulta</b><p>Conversamos sobre la ocasión, tu estilo y presupuesto. Puedes hacerlo por videollamada.</p></div>
+  <div class="step"><span class="n">PASO 02</span><br><b>Tela</b><p>Seleccionamos la tela en tienda o te enviamos muestras digitales reales.</p></div>
+  <div class="step"><span class="n">PASO 03</span><br><b>Toma de medidas</b><p>Chequeo en dos sesiones para que la prenda caiga perfecta.</p></div>
+  <div class="step"><span class="n">PASO 04</span><br><b>Entrega</b><p>Prueba final con retoque complementario si algo cambió en tu talla.</p></div>
+</div>
+<div class="quote">"Llegué sin saber qué usar para mi boda y salí con el mejor traje de mi vida."</div>
+<div class="cta-band">
+  <h2>Tu traje está a una cita de distancia</h2>
+  <p>Citas disponibles de lunes a sábado en Bogotá.</p>
+  <a class="btn" href="https://wa.me/573006555555">Reservar ahora</a>
+</div>
+<footer>© Casa Duarte · Bogotá · Demo creada por <a href="https://orangeember.com">Orange Ember Studios</a></footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique Aurora — Moda femenina</title>
+<style>
+  :root { --rose:#b03a6e; --plum:#2b1224; --cream:#fbf5f2; --gold:#d9a13b; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:Georgia, 'Segoe UI', serif; background:var(--cream); color:#2a2230; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:18px 6%; background:#fff; position:sticky; top:0; box-shadow:0 1px 10px rgba(0,0,0,.08); z-index:9; }
+  nav .brand { font-size:22px; letter-spacing:2px; color:var(--rose); }
+  nav a { color:#2a2230; text-decoration:none; margin-left:22px; font-family:'Segoe UI',sans-serif; font-size:15px; }
+  nav a:hover { color:var(--rose); }
+  .hero { background:linear-gradient(120deg, var(--plum), #63214d 60%, #b03a6e); color:var(--cream); padding:90px 6%; }
+  .hero h1 { font-size:clamp(30px,5vw,52px); max-width:520px; line-height:1.15; }
+  .hero p { margin:18px 0 28px; max-width:440px; font-family:'Segoe UI',sans-serif; opacity:.92; line-height:1.7; }
+  .btn { display:inline-block; padding:13px 30px; border-radius:30px; background:var(--gold); color:#20140b; text-decoration:none; font-family:'Segoe UI',sans-serif; font-weight:700; }
+  .btn.wa { background:#25d366; color:#06230e; margin-left:12px; }
+  section { padding:60px 6%; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; max-width:1100px; margin:0 auto; }
+  .card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 4px 18px rgba(43,18,36,.08); }
+  .pic { height:210px; }
+  .p1 { background:linear-gradient(135deg,#e7c6d3,#b03a6e); } .p2 { background:linear-gradient(135deg,#f2e3c8,#d9a13b); }
+  .p3 { background:linear-gradient(135deg,#d8cbe0,#6d4a86); } .p4 { background:linear-gradient(135deg,#c8e0d8,#2f7a5f); }
+  .card .info { padding:16px; font-family:'Segoe UI',sans-serif; }
+  .card h3 { font-size:16px; margin-bottom:4px; }
+  .price { color:var(--rose); font-weight:700; }
+  h2.sec { text-align:center; font-size:30px; margin-bottom:28px; color:var(--plum); }
+  .strip { background:var(--plum); color:var(--cream); text-align:center; padding:46px 20px; }
+  .strip p { font-family:'Segoe UI',sans-serif; margin:10px 0 20px; opacity:.85; }
+  footer { text-align:center; padding:22px; font-family:'Segoe UI',sans-serif; font-size:13px; color:#7a6f80; background:#f1e4e9; }
+  footer a { color:var(--rose); }
+</style>
+</head>
+<body>
+<nav><div class="brand">BOUTIQUE AURORA</div><div><a href="#">Colección</a><a href="#">Nuevos</a><a href="#">Contacto</a></div></nav>
+<div class="hero">
+  <h1>Elegancia que se siente en cada costura</h1>
+  <p>Colección nueva cada semana. Vestidos, blazers y accesorios seleccionados para ti, con atención personalizada en Bogotá.</p>
+  <a class="btn" href="#coleccion">Ver colección</a><a class="btn wa" href="https://wa.me/573005789091">WhatsApp</a>
+</div>
+<section id="coleccion">
+  <h2 class="sec">Nueva colección</h2>
+  <div class="grid">
+    <div class="card"><div class="pic p1"></div><div class="info"><h3>Vestido Rosalie</h3><div class="price">$189.900</div></div></div>
+    <div class="card"><div class="pic p2"></div><div class="info"><h3>Blazer Sol</h3><div class="price">$219.900</div></div></div>
+    <div class="card"><div class="pic p3"></div><div class="info"><h3>Pantalón Lila</h3><div class="price">$149.900</div></div></div>
+    <div class="card"><div class="pic p4"></div><div class="info"><h3>Conjunto Verde</h3><div class="price">$199.900</div></div></div>
+  </div>
+</section>
+<div class="strip">
+  <h2>Encuentra tu look en minutos</h2>
+  <p>Escríbenos por WhatsApp, te asesoramos y apartamos tu talla antes de que se agote.</p>
+  <a class="btn" href="https://wa.me/573005789091">Pedir por WhatsApp</a>
+</div>
+<footer>© Boutique Aurora · Bogotá · Demo creada por <a href="https://orangeember.com">Orange Ember Studios</a></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cositas con Alma — Artesanías colombianas</title>
+<style>
+  :root { --leaf:#3f6b34; --sand:#f6f1e7; --terra:#c96f3b; --ink:#2d2a22; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--sand); color:var(--ink); }
+  nav { background:#fff; padding:16px 6%; display:flex; justify-content:space-between; align-items:center; box-shadow:0 1px 10px rgba(0,0,0,.07); position:sticky; top:0; }
+  nav .logo { font-weight:800; color:var(--leaf); font-size:18px; }
+  nav a { color:var(--ink); margin-left:18px; text-decoration:none; font-size:14px; }
+  .hero { background:linear-gradient(115deg,#1c2b1a,#4d7a2f); color:#f9f6ee; padding:86px 6%; }
+  .hero h1 { font-size:clamp(30px,5vw,48px); max-width:520px; line-height:1.18; }
+  .hero p { margin:16px 0 28px; opacity:.92; max-width:440px; line-height:1.65; }
+  .btn { display:inline-block; padding:12px 26px; border-radius:26px; background:var(--terra); color:#fff; text-decoration:none; font-weight:700; }
+  .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; max-width:1100px; margin:50px auto; padding:0 4%; }
+  .prod { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 14px rgba(63,107,52,.1); }
+  .pic { height:180px; display:flex; align-items:center; justify-content:center; font-size:46px; }
+  .a1 { background:linear-gradient(135deg,#e8dfc9,#b0a06a); } .a2 { background:linear-gradient(135deg,#f0d9c9,#a1683f); }
+  .a3 { background:linear-gradient(135deg,#d9e2c9,#6f8a4b); } .a4 { background:linear-gradient(135deg,#e2cfd9,#8a5a75); }
+  .prod h3 { padding:14px 16px 2px; font-size:15px; }
+  .prod .pr { padding:0 16px 16px; font-weight:800; color:var(--leaf); }
+  .story { max-width:700px; margin:20px auto 60px; padding:0 6%; text-align:center; color:#5a5344; line-height:1.8; }
+  footer { text-align:center; padding:22px; font-size:13px; color:#7d7565; background:#ece5d6; }
+  footer a { color:var(--leaf); text-decoration:none; }
+</style>
+</head>
+<body>
+<nav><div class="logo">🌱 COSITAS CON ALMA</div><div><a href="#">Tienda</a><a href="#">Nuestros makers</a><a href="#">Contacto</a></div></nav>
+<div class="hero">
+  <h1>Hecho a mano en Colombia</h1>
+  <p>Manillas Wayú, agendas ilustradas y postales vintage. Cada pieza apoya el talento local y viaja a toda Colombia.</p>
+  <a class="btn" href="#tienda">Comprar ahora</a>
+</div>
+<div class="products" id="tienda">
+  <div class="prod"><div class="pic a1">📿</div><h3>Manilla Wayú tejida</h3><div class="pr">$20.000</div></div>
+  <div class="prod"><div class="pic a2">🗓️</div><h3>Agenda de colores</h3><div class="pr">$20.000</div></div>
+  <div class="prod"><div class="pic a3">💌</div><h3>Postales vintage</h3><div class="pr">$5.000</div></div>
+  <div class="prod"><div class="pic a4">💍</div><h3>Anillos de ánimo</h3><div class="pr">$20.000</div></div>
+</div>
+<div class="story">Detrás de cada pieza hay manos reales. Conoce a los artistas que las crean y lleva algo que cuenta una historia.</div>
+<footer>© Cositas con Alma · Bogotá · Demo creada por <a href="https://orangeember.com">Orange Ember Studios</a></footer>
+</body>
+</html>

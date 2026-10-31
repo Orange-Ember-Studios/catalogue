@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso Firme — Calzado</title>
+<style>
+  :root { --blue:#1e5f8a; --dark:#101d2c; --light:#f3f7fa; --orange:#ff7a4d; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--light); color:#182430; }
+  nav { background:#fff; display:flex; justify-content:space-between; align-items:center; padding:16px 6%; box-shadow:0 2px 12px rgba(0,0,0,.06); position:sticky; top:0; }
+  nav .logo { font-weight:800; font-size:20px; color:var(--blue); }
+  nav .logo span { color:var(--orange); }
+  nav a { color:#182430; margin-left:20px; text-decoration:none; font-size:15px; }
+  .hero { background:linear-gradient(110deg, var(--dark), var(--blue)); padding:84px 6%; color:#fff; }
+  .hero h1 { font-size:clamp(30px,5vw,48px); max-width:540px; line-height:1.15; }
+  .hero p { margin:16px 0 26px; opacity:.9; max-width:430px; line-height:1.65; }
+  .btn { display:inline-block; padding:13px 28px; border-radius:10px; background:var(--orange); color:#241109; font-weight:700; text-decoration:none; }
+  .btn.ghost { background:transparent; border:2px solid #fff; color:#fff; margin-left:12px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; max-width:1100px; margin:50px auto; padding:0 4%; }
+  .card { background:#fff; border-radius:14px; padding:18px; box-shadow:0 4px 16px rgba(16,40,60,.08); }
+  .thumb { height:150px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:44px; }
+  .t1 { background:linear-gradient(135deg,#d9e8f5,#7fb2d9); } .t2 { background:linear-gradient(135deg,#f5e0d9,#d97f4e); }
+  .t3 { background:linear-gradient(135deg,#e0d9f5,#7f62d9); } .t4 { background:linear-gradient(135deg,#d9f5e2,#3fc274); }
+  .card h3 { margin:12px 0 4px; }
+  .price { color:var(--blue); font-weight:800; }
+  .sizes { color:#67788a; font-size:13px; margin-top:4px; }
+  .feature { background:#fff; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; padding:50px 6%; max-width:1100px; margin:30px auto; border-radius:16px; }
+  .feature div { text-align:center; }
+  .feature b { color:var(--blue); }
+  .feature p { color:#5a6a7a; font-size:14px; margin-top:6px; }
+  .divider { height:2px; background:linear-gradient(90deg,var(--blue),var(--orange)); border:none; max-width:110px; margin:0 auto 22px; }
+  footer { background:var(--dark); color:#9fb2c4; text-align:center; padding:24px; font-size:13px; }
+  footer a { color:var(--orange); text-decoration:none; }
+</style>
+</head>
+<body>
+<nav><div class="logo">PASO FIRME <span>CALZADO</span></div><div><a href="#">Hombre</a><a href="#">Mujer</a><a href="#">Niños</a><a href="#">Sucursales</a></div></nav>
+<div class="hero">
+  <h1>El zapato correcto, en la talla correcta</h1>
+  <p>Calzado para toda la familia con sedes en el norte de Bogotá. Consulta existencias en tu talla antes de pasar por la tienda.</p>
+  <a class="btn" href="#catalogo">Ver catálogo</a><a class="btn ghost" href="https://wa.me/573105555555">Preguntar tallas</a>
+</div>
+<h2 style="text-align:center; margin-top:40px;">Catálogo</h2>
+<div class="cards" id="catalogo">
+  <div class="card"><div class="thumb t1">👟</div><h3>Tenis Urban 01</h3><div class="price">$139.900</div><div class="sizes">Tallas 35 – 41</div></div>
+  <div class="card"><div class="thumb t2">🥾</div><h3>Bota Sendero</h3><div class="price">$229.900</div><div class="sizes">Tallas 38 – 45</div></div>
+  <div class="card"><div class="thumb t3">👠</div><h3>Zapato Gala</h3><div class="price">$119.900</div><div class="sizes">Tallas 34 – 39</div></div>
+  <div class="card"><div class="thumb t4">🩴</div><h3>Sandalia Playa</h3><div class="price">$59.900</div><div class="sizes">Tallas 35 – 43</div></div>
+</div>
+<div class="feature">
+  <div><hr class="divider"><b>Hasta 12 cuotas</b><p>Todas las tarjetas y pagos digitales.</p></div>
+  <div><hr class="divider"><b>Cambio gratis</b><p>30 días para cambiar la talla.</p></div>
+  <div><hr class="divider"><b>4 sedes</b><p>Cedritos, Usaquén, Chapinero y Suba.</p></div>
+</div>
+<footer>© Paso Firme Calzado · Bogotá · Demo creada por <a href="https://orangeember.com">Orange Ember Studios</a></footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de diseños web — Orange Ember Studios</title>
+<meta name="description" content="Ejemplos reales de páginas web para tiendas y emprendimientos, hechos por Orange Ember Studios.">
+<style>
+  :root { --bg:#0e1117; --card:#161b25; --text:#e8ecf2; --muted:#8b95a5; --accent:#ff7a4d; --accent2:#ffb34d; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--bg); color:var(--text); }
+  header { text-align:center; padding:64px 20px 40px; background:linear-gradient(180deg,#131826,var(--bg)); }
+  header .logo { font-size:14px; letter-spacing:3px; color:var(--accent); text-transform:uppercase; font-weight:700; }
+  header h1 { font-size:clamp(28px,5vw,42px); margin:14px 0 10px; }
+  header p { color:var(--muted); max-width:560px; margin:0 auto 26px; line-height:1.6; }
+  header a.cta { display:inline-block; padding:12px 26px; border-radius:10px; background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#10131a; font-weight:700; text-decoration:none; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; max-width:1100px; margin:0 auto; padding:30px 20px 60px; }
+  .card { background:var(--card); border:1px solid #232b3a; border-radius:16px; overflow:hidden; text-decoration:none; color:var(--text); display:block; transition:transform .2s, border-color .2s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--accent); }
+  .thumb { height:150px; display:flex; align-items:center; justify-content:center; font-size:38px; }
+  .card .info { padding:16px 18px 20px; }
+  .card h2 { font-size:19px; margin-bottom:6px; }
+  .card span { color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); padding:26px; font-size:14px; border-top:1px solid #232b3a; }
+  footer a { color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Orange Ember Studios</div>
+  <h1>Diseños web que venden</h1>
+  <p>Esto no son maquetas muertas: son páginas reales que abrimos para nuestros clientes. Haz clic en cualquiera y mira como la verían tus propios clientes.</p>
+  <a class="cta" href="https://orangeember.com">orangeember.com</a>
+</header>
+<main class="grid">
+  <a class="card" href="plantillas/boutique.html"><div class="thumb" style="background:linear-gradient(135deg,#2b1224,#63214d)">👗</div><div class="info"><h2>Boutique Aurora</h2><span>Tienda de ropa femenina · catálogo + WhatsApp</span></div></a>
+  <a class="card" href="plantillas/calzado.html"><div class="thumb" style="background:linear-gradient(135deg,#101d2c,#2c5f8a)">👟</div><div class="info"><h2>Paso Firme</h2><span>Zapatería · catálogo por tallas y puntos de venta</span></div></a>
+  <a class="card" href="plantillas/formal.html"><div class="thumb" style="background:linear-gradient(135deg,#1a1611,#8a6a2f)">👔</div><div class="info"><h2>Casa Duarte</h2><span>Sastrería y formal wear · citas + selección de telas</span></div></a>
+  <a class="card" href="plantillas/artesanal.html"><div class="thumb" style="background:linear-gradient(135deg,#1c2b1a,#4d7a2f)">🧣</div><div class="info"><h2>Cositas con Alma</h2><span>Accesorios artesanales · tienda en línea y talento local</span></div></a>
+  <a class="card" href="plantillas/estetica.html"><div class="thumb" style="background:linear-gradient(135deg,#26122e,#7a2f6a)">💅</div><div class="info"><h2>Lumé Beauty</h2><span>Estética y belleza · agendamiento en línea</span></div></a>
+  <a class="card" href="plantillas/cafe.html"><div class="thumb" style="background:linear-gradient(135deg,#231610,#96522f)">☕</div><div class="info"><h2>Café Vereda</h2><span>Cafetería · menú digital y pedidos</span></div></a>
+</main>
+<footer>Hecho con 🔥 por <a href="https://orangeember.com">Orange Ember Studios</a> · Diseño y desarrollo web en Colombia</footer>
+</body>
+</html>
