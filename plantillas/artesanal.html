@@ -79,6 +79,12 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 .card:nth-child(4), .prod:nth-child(4), .svc:nth-child(4) { animation: pop .7s ease .3s both }
 .thumb, .pic { position: relative; overflow: hidden }
 .thumb::before, .pic::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.45), transparent 58%) }
+
+.thumb img, .pic img, .svc-pic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0 }
+.svc-pic { height: 140px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -24px -24px 16px }
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 950px; margin: -10px auto 50px; padding: 0 5% }
+.gal img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35,22,16,.15) }
+
 ::selection { background: rgba(255,122,77,.35) }
 @media (max-width: 820px) {
   .trans { width: 180px !important; height: 180px !important; opacity: .32 }
@@ -92,17 +98,17 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 
 
 <nav><div class="logo"> COSITAS CON ALMA</div><div><a href="#">Tienda</a><a href="#">Nuestros makers</a><a href="#">Contacto</a></div></nav>
-<div class="hero">
+<div class="hero" style="background: linear-gradient(115deg, rgba(28,43,26,.88), rgba(77,122,47,.78)), url('../assets/img/artesanal/1.jpg') center/cover">
 <h1>Hecho a mano en Colombia</h1>
 <p>Manillas Wayú, agendas ilustradas y postales vintage. Cada pieza apoya el talento local y viaja a toda Colombia.</p>
 <a class="btn" href="#tienda">Comprar ahora</a>
 <a class="btn" style="background:#25d366;color:#06230e;margin-left:12px;" href="https://wa.me/573332840946">Pedir por WhatsApp</a>
 </div>
 <div class="products" id="tienda">
-<div class="prod"><div class="pic a1"></div><h3>Manilla Wayú tejida</h3><div class="pr">$20.000</div></div>
-<div class="prod"><div class="pic a2"></div><h3>Agenda de colores</h3><div class="pr">$20.000</div></div>
-<div class="prod"><div class="pic a3"></div><h3>Postales vintage</h3><div class="pr">$5.000</div></div>
-<div class="prod"><div class="pic a4"></div><h3>Anillos de ánimo</h3><div class="pr">$20.000</div></div>
+<div class="prod"><div class="pic a1"><img src="../assets/img/artesanal/1.jpg" alt="Mochilas Wayuu tejidas" loading="lazy"></div><h3>Manilla Wayú tejida</h3><div class="pr">$20.000</div></div>
+<div class="prod"><div class="pic a2"><img src="../assets/img/artesanal/2.jpg" alt="Puesto de artesanías del mercado" loading="lazy"></div><h3>Agenda de colores</h3><div class="pr">$20.000</div></div>
+<div class="prod"><div class="pic a3"><img src="../assets/img/artesanal/3.jpg" alt="Tejido artesanal en macramé" loading="lazy"></div><h3>Postales vintage</h3><div class="pr">$5.000</div></div>
+<div class="prod"><div class="pic a4"><img src="../assets/img/artesanal/4.jpg" alt="Detalle de tejido macramé" loading="lazy"></div><h3>Anillos de ánimo</h3><div class="pr">$20.000</div></div>
 </div>
 <div class="story">Detrás de cada pieza hay manos reales. Conoce a los artistas que las crean y lleva algo que cuenta una historia.</div>
 <footer>© Cositas con Alma · Bogotá · Demo creada por<a href="https://orangeember.com">Orange Ember Studios</a></footer>

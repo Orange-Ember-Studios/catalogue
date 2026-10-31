@@ -85,6 +85,12 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 .card:nth-child(4), .prod:nth-child(4), .svc:nth-child(4) { animation: pop .7s ease .3s both }
 .thumb, .pic { position: relative; overflow: hidden }
 .thumb::before, .pic::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.45), transparent 58%) }
+
+.thumb img, .pic img, .svc-pic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0 }
+.svc-pic { height: 140px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -24px -24px 16px }
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 950px; margin: -10px auto 50px; padding: 0 5% }
+.gal img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35,22,16,.15) }
+
 ::selection { background: rgba(255,122,77,.35) }
 @media (max-width: 820px) {
   .trans { width: 180px !important; height: 180px !important; opacity: .32 }
@@ -98,7 +104,7 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 
 
 <nav><div class="logo"> CAFÉ VEREDA</div><div><a href="#">Menú</a><a href="#">Pedido</a><a href="#">Horario</a></div></nav>
-<div class="hero">
+<div class="hero" style="background: linear-gradient(rgba(35,22,16,.8), rgba(35,22,16,.86)), url('../assets/img/cafe/2.jpg') center/cover">
 <h1>Café recién tostado a la vuelta de tu esquina</h1>
 <p>Granos colombianos de origen tostados en casa y panes dulces hechos cada mañana. Toma algo en el local, pide para llevar o reserva tu mesa.</p>
 <a class="btn" href="#menu">Ver menú</a><a class="btn ghost" href="https://wa.me/573332840946">Hacer pedido</a>
@@ -111,6 +117,7 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 <div class="row"><div><b>Rollo de canela</b><span class="d">Horneado cada mañana desde las 7 a.m.</span></div><div class="pr">$6.500</div></div>
 <div class="row"><div><b>Desayuno campesino</b><span class="d">Huevos, arepa, café y fruta</span></div><div class="pr">$16.900</div></div>
 </div>
+<div class="gal"><img src="../assets/img/cafe/1.jpg" alt="Matcha latte con arte en espuma" loading="lazy"><img src="../assets/img/cafe/3.jpg" alt="Café servido en taza amarilla" loading="lazy"><img src="../assets/img/cafe/2.jpg" alt="Capuchino con arte en espuma" loading="lazy"><img src="../assets/img/cafe/4.jpg" alt="Latte en vaso de vidrio" loading="lazy"></div>
 <div class="hours">
 <h3>⏰ Horario</h3>
 <p><span>Lunes a viernes</span><span>7:00 am – 8:00 pm</span></p>

@@ -93,6 +93,12 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 .card:nth-child(4), .prod:nth-child(4), .svc:nth-child(4) { animation: pop .7s ease .3s both }
 .thumb, .pic { position: relative; overflow: hidden }
 .thumb::before, .pic::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.45), transparent 58%) }
+
+.thumb img, .pic img, .svc-pic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0 }
+.svc-pic { height: 140px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -24px -24px 16px }
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 950px; margin: -10px auto 50px; padding: 0 5% }
+.gal img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35,22,16,.15) }
+
 ::selection { background: rgba(255,122,77,.35) }
 @media (max-width: 820px) {
   .trans { width: 180px !important; height: 180px !important; opacity: .32 }
@@ -106,17 +112,17 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 
 
 <nav><div class="logo">PASO FIRME<span>CALZADO</span></div><div><a href="#">Hombre</a><a href="#">Mujer</a><a href="#">Niños</a><a href="#">Sucursales</a></div></nav>
-<div class="hero">
+<div class="hero" style="background: linear-gradient(110deg, rgba(16,29,44,.92), rgba(30,95,138,.8)), url('../assets/img/calzado/1.jpg') center/cover">
 <h1>El zapato correcto, en la talla correcta</h1>
 <p>Calzado para toda la familia con sedes en el norte de Bogotá. Consulta existencias en tu talla antes de pasar por la tienda.</p>
 <a class="btn" href="#catalogo">Ver catálogo</a><a class="btn ghost" href="https://wa.me/573332840946">Preguntar tallas</a>
 </div>
 <h2 style="text-align:center; margin-top:40px;">Catálogo</h2>
 <div class="cards" id="catalogo">
-<div class="card"><div class="thumb t1"></div><h3>Tenis Urban 01</h3><div class="price">$139.900</div><div class="sizes">Tallas 35 – 41</div></div>
-<div class="card"><div class="thumb t2"></div><h3>Bota Sendero</h3><div class="price">$229.900</div><div class="sizes">Tallas 38 – 45</div></div>
-<div class="card"><div class="thumb t3"></div><h3>Zapato Gala</h3><div class="price">$119.900</div><div class="sizes">Tallas 34 – 39</div></div>
-<div class="card"><div class="thumb t4"></div><h3>Sandalia Playa</h3><div class="price">$59.900</div><div class="sizes">Tallas 35 – 43</div></div>
+<div class="card"><div class="thumb t1"><img src="../assets/img/calzado/1.jpg" alt="Tenis urbanos en la calle" loading="lazy"></div><h3>Tenis Urban 01</h3><div class="price">$139.900</div><div class="sizes">Tallas 35 – 41</div></div>
+<div class="card"><div class="thumb t2"><img src="../assets/img/calzado/2.jpg" alt="Tenis deportivos en fondo claro" loading="lazy"></div><h3>Bota Sendero</h3><div class="price">$229.900</div><div class="sizes">Tallas 38 – 45</div></div>
+<div class="card"><div class="thumb t3"><img src="../assets/img/calzado/3.jpg" alt="Zapatos formales para hombre" loading="lazy"></div><h3>Zapato Gala</h3><div class="price">$119.900</div><div class="sizes">Tallas 34 – 39</div></div>
+<div class="card"><div class="thumb t4"><img src="../assets/img/calzado/4.jpg" alt="Tenis de moda actuales" loading="lazy"></div><h3>Sandalia Playa</h3><div class="price">$59.900</div><div class="sizes">Tallas 35 – 43</div></div>
 </div>
 <div class="feature">
 <div><hr class="divider"><b>Hasta 12 cuotas</b><p>Todas las tarjetas y pagos digitales.</p></div>

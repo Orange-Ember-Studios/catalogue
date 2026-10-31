@@ -75,6 +75,12 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 .card:nth-child(4), .prod:nth-child(4), .svc:nth-child(4) { animation: pop .7s ease .3s both }
 .thumb, .pic { position: relative; overflow: hidden }
 .thumb::before, .pic::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.45), transparent 58%) }
+
+.thumb img, .pic img, .svc-pic img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0 }
+.svc-pic { height: 140px; border-radius: 12px 12px 0 0; overflow: hidden; margin: -24px -24px 16px }
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 950px; margin: -10px auto 50px; padding: 0 5% }
+.gal img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 20px rgba(35,22,16,.15) }
+
 ::selection { background: rgba(255,122,77,.35) }
 @media (max-width: 820px) {
   .trans { width: 180px !important; height: 180px !important; opacity: .32 }
@@ -94,12 +100,12 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
 <a class="cta" href="https://orangeember.com">orangeember.com</a>
 </header>
 <main class="grid">
-<a class="card" href="plantillas/boutique.html"><div class="thumb" style="background:linear-gradient(135deg,#2b1224,#63214d)"></div><div class="info"><h2>Boutique Aurora</h2><span>Tienda de ropa femenina · catálogo + WhatsApp</span></div></a>
-<a class="card" href="plantillas/calzado.html"><div class="thumb" style="background:linear-gradient(135deg,#101d2c,#2c5f8a)"></div><div class="info"><h2>Paso Firme</h2><span>Zapatería · catálogo por tallas y puntos de venta</span></div></a>
-<a class="card" href="plantillas/formal.html"><div class="thumb" style="background:linear-gradient(135deg,#1a1611,#8a6a2f)"></div><div class="info"><h2>Casa Duarte</h2><span>Sastrería y formal wear · citas + selección de telas</span></div></a>
-<a class="card" href="plantillas/artesanal.html"><div class="thumb" style="background:linear-gradient(135deg,#1c2b1a,#4d7a2f)"></div><div class="info"><h2>Cositas con Alma</h2><span>Accesorios artesanales · tienda en línea y talento local</span></div></a>
-<a class="card" href="plantillas/estetica.html"><div class="thumb" style="background:linear-gradient(135deg,#26122e,#7a2f6a)"></div><div class="info"><h2>Lumé Beauty</h2><span>Estética y belleza · agendamiento en línea</span></div></a>
-<a class="card" href="plantillas/cafe.html"><div class="thumb" style="background:linear-gradient(135deg,#231610,#96522f)"></div><div class="info"><h2>Café Vereda</h2><span>Cafetería · menú digital y pedidos</span></div></a>
+<a class="card" href="plantillas/boutique.html"><div class="thumb" style="background:linear-gradient(135deg,#2b1224,#63214d)"><img src="assets/img/boutique/3.jpg" alt="Vestido de pasarela" loading="lazy"></div><div class="info"><h2>Boutique Aurora</h2><span>Tienda de ropa femenina · catálogo + WhatsApp</span></div></a>
+<a class="card" href="plantillas/calzado.html"><div class="thumb" style="background:linear-gradient(135deg,#101d2c,#2c5f8a)"><img src="assets/img/calzado/2.jpg" alt="Tenis en fondo claro" loading="lazy"></div><div class="info"><h2>Paso Firme</h2><span>Zapatería · catálogo por tallas y puntos de venta</span></div></a>
+<a class="card" href="plantillas/formal.html"><div class="thumb" style="background:linear-gradient(135deg,#1a1611,#8a6a2f)"><img src="assets/img/formal/1.jpg" alt="Traje a medida" loading="lazy"></div><div class="info"><h2>Casa Duarte</h2><span>Sastrería y formal wear · citas + selección de telas</span></div></a>
+<a class="card" href="plantillas/artesanal.html"><div class="thumb" style="background:linear-gradient(135deg,#1c2b1a,#4d7a2f)"><img src="assets/img/artesanal/1.jpg" alt="Mochilas Wayuu" loading="lazy"></div><div class="info"><h2>Cositas con Alma</h2><span>Accesorios artesanales · tienda en línea y talento local</span></div></a>
+<a class="card" href="plantillas/estetica.html"><div class="thumb" style="background:linear-gradient(135deg,#26122e,#7a2f6a)"><img src="assets/img/estetica/3.jpg" alt="Uñas de manicure" loading="lazy"></div><div class="info"><h2>Lumé Beauty</h2><span>Estética y belleza · agendamiento en línea</span></div></a>
+<a class="card" href="plantillas/cafe.html"><div class="thumb" style="background:linear-gradient(135deg,#231610,#96522f)"><img src="assets/img/cafe/2.jpg" alt="Capuchino con arte" loading="lazy"></div><div class="info"><h2>Café Vereda</h2><span>Cafetería · menú digital y pedidos</span></div></a>
 </main>
 <footer>Hecho por<a href="https://orangeember.com">Orange Ember Studios</a> · Diseño y desarrollo web en Colombia</footer>
 </body>
