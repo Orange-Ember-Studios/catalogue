@@ -253,8 +253,7 @@ main, section, .menu, .cards, .grid, .steps, .services, .products { position: re
     var a = document.getElementById("mcta");
     var p = cur; if (!p) return;
     var extra = "";
-    if (cur.sizes) extra = " Talla: " + (selSz || "consultar");
-    var msg = p.wa.replace("__SZ__", selSz || "consultar") + extra;
+    var msg = p.wa.replace("__SZ__", selSz || "consultar");
     a.textContent = cur.btn;
     a.href = "https://wa.me/573332840946?text=" + encodeURIComponent(msg);
   }
